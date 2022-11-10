@@ -4,19 +4,32 @@ from .forms import FormTask
 
 
 def index(request):
-    articles = Task.objects.order_by('-id')
-    return render(request, 'main/index.html',
-                  {'title': "Образовательная платфома", "articles": articles})
+    return render(request, 'main/index.html')
 
 
 def about(request):
     return render(request, 'main/about.html')
 
 def lib(request):
-    return render(request, 'main/lib.html')
+    articles = Task.objects.order_by('-id')
+    return render(request, 'main/lib.html',
+                  {'title': "Образовательная платфома", "articles": articles})
+
 
 def blog(request):
     return render(request, 'main/blog.html')
+
+def register(request):
+    return render(request, 'main/register.html')
+
+def home(request):
+    return render(request, 'main/home.html')
+
+def password_reset_form(request):
+    return render(request, 'main/password_reset_form.html')
+
+def login(request):
+    return render(request, 'main/login.html')
 
 def help(request):
     return render(request, 'main/help.html')

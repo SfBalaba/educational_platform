@@ -6,15 +6,6 @@
 
 {% block content %}
     <h1>Главная страница</h1>
-    <h3>Список статей</h3>
-    {% if articles %}
-        {% for el in articles %}
-            <div class = "alert alert-warning mt-2">
-                <h3>{{el.title}}</h3>
-                <p>{{el.task}}</p>
-            </div>
-        {% endfor %}
-    {% else %}
-        <p>У вас нет статей</p>
-    {% endif %}
+<!--    <h3>Список статей</h3>-->
+
 {% endblock%}
