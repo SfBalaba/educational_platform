@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -17,14 +17,14 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li> User: {{ user }}</li>
+            <li>User: {{ user }}</li>
           <li><a href="{% url 'home'%}" class="nav-link px-2 text-white">Главная</a></li>
           <li><a href="{% url 'about'%}" class="nav-link px-2 text-white">О нас</a></li>
             <li><a href="{% url 'lib'%}" class="nav-link px-2 text-white">Библиотека</a></li>
             <li><a href="{% url 'training'%}" class="nav-link px-2 text-white">Тренажёры</a></li>
              <li><a href="{% url 'blog'%}" class="nav-link px-2 text-white">Блог</a></li>
-            <li><a href="{% url 'help'%}" class="nav-link px-2 text-secondary">Помощь</a></li>
-            <li><a href="{% url 'create'%}" class="nav-link px-2 text-secondary">Создать статью</a></li>
+            <li><a href="{% url 'help'%}" class="nav-link px-2 text-white">Помощь</a></li>
+            <li><a href="{% url 'create'%}" class="nav-link px-2 text-white">Создать статью</a></li>
 
 
         </ul>
@@ -34,8 +34,8 @@
         </form>
 
         <div class="text-end">
-          <button  type="button"  class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <a href="{%url 'login'%}"><button  type="button"  class="btn btn-outline-light me-2">Войти</button></a>
+          <a href="{%url 'register'%}"><button type="button" class="btn btn-warning">Регистрация</button></a>
         </div>
       </div>
     </div>
