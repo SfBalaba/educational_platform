@@ -1,0 +1,36 @@
+.grades-container {
+    display: flex;
+    flex-wrap:wrap;
+    align-content: flex-start;
+    background-color: #b6b6b6;
+    padding: 10px;
+    padding-top: 30px;
+    width: 70%;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.grade {
+    flex: 1;
+    margin: 10px;
+    min-width: calc(100% / 4 - 20px);
+    height: fit-content;
+    border-radius: 1em;
+    font-size: xx-large;
+    background-color: #FEFDF8;
+    text-align: center;
+}
+
+.grade>a {
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #7766C6;
+}
+
+.grade>a:hover {
+    text-decoration: underline;
+    color: #46467A;
+}

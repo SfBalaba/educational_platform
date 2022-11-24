@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+
+{% block title %}New Article{% endblock %}
+
+{% block main %}
+<div style="display: flex; flex-direction: row; justify-content: flex-start; padding-top: 30px;">
+    <h2>Создание новой статьи</h2>
+</div>
+<form method="post">     <!-- action="/blog" -->
+    {% csrf_token %}
+    {{ form.title }}<br>
+    {{ form.task }}<br>
+     <button type="submit" class="btn-success dark-button">Добавить</button>
+</form>
+{% endblock %}

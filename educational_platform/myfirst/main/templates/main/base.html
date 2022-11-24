@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/main.css">
+    <link rel="stylesheet" href="../../../static/css/home.css">
+    <link rel="stylesheet" href="../../../static/css/blog.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div>logo</div>
+        <div class="link-holder">
+            <form action="/"><button class="header-btn">Главная</button></form>
+            <div class="divider"></div>
+            <form action="/training"><button class="header-btn">Тренажёры</button></form>
+            <div class="divider"></div>
+            <form action="/blog"><button class="header-btn">Блог</button></form>
+            <div class="divider"></div>
+            <form action="/help"><button class="header-btn">Помощь</button></form>
+            <button type="button" class="btn-profile ">Личный кабинет</button>
+        </div>
+    </header>
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+</body>
+</html>

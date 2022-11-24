@@ -1,0 +1,20 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+Библиотека
+{% endblock%}
+
+{% block main %}
+    <h1>Дополнительные материалы</h1>
+
+    {% if articles %}
+        {% for el in articles %}
+            <div class = "alert alert-warning mt-2">
+                <h3>{{el.title}}</h3>
+                <p>{{el.task}}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>У вас нет статей</p>
+    {% endif %}
+{% endblock%}
