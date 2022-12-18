@@ -9,5 +9,5 @@ urlpatterns = [
     path('help/', views.help, name = 'help'),
     path('blog/', views.blog, name = 'blog'),
     path('create/', views.create, name = 'create'),
-    path('auth/', include('django.contrib.auth.urls')),
+    path('auth/', include('django.contrib.auth.urls')),#remove
 ]
