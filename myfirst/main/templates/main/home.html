@@ -1,0 +1,37 @@
+{% extends 'main/base.html'%}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<div style="margin-left:-5vw; display:flex; background-color: #46467A; color: #FEFDF8; flex-direction: row; width: 100vw; height: 40vh; justify-content: center;">
+  <div style="display: flex; flex-direction: column; width:30%; align-self: center;">
+    <h3>Математика - это интересно!</h3>
+    <div style="width:100%;">
+      <p>MathLite – это образовательная платформа, на которой собраны дополнительные материалы для разных классов по предмету математика.  Здесь ты сможешь найти много полезной и интересной информации и глубже разобраться в пройденных темах.</p>
+    </div>
+  </div>
+  <img style="height: 100%;" src="../../../static/media/homepage.png">
+</div>
+<div class="grades-container">
+  <div class="grade">
+    <div><a  onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"
+      style="color: #7766C6; text-decoration: none;" href="{% url '5grade'%}">5 класс</a></div>
+    <img src="../../../static/media/5grade.png" style="max-width:60%; height:auto">
+</div>
+  <div class="grade">
+    <div><a onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"
+      style="color: #7766C6; text-decoration: none;" href="{% url '6grade'%}">6 класс</a></div>
+    <img src="../../../static/media/6grade.png" style="max-width:60%; height:auto">
+  </div>
+  <!-- <div class="grade"><a href="#">7 класс</a></div>
+  <div class="grade"><a href="#">8 класс</a></div>
+  <div class="grade"><a href="#">9 класс</a></div>
+  <div class="grade"><a href="#">10 класс</a></div>
+  <div class="grade"><a href="#">11 класс</a></div> -->
+  <div class="grade">
+    <div><a onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'"
+      style="color: #7766C6; text-decoration: none;" href="{% url 'lib' %}">Библиотека</a></div>
+    <img src="../../../static/media/lib.png" style="max-width:60%; height:auto">
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'main/base.html'%}
+{% block title %}Grades{% endblock %}
+{% block main %}
+<div>
+    {{title}}
+{% if articles %}
+
+        {% for el in articles %}
+            {% if el.article_type == "6" %}
+                <div class = "alert alert-warning mt-2">
+                    <h3>{{el.title}}</h3>
+                    <p>{{el.task}}</p>
+                </div>
+{% endif %}
+        {% endfor %}
+    {% else %}
+        <p>У вас нет статей</p>
+    {% endif %}
+    <p>{% block grade %}{% endblock %}</p>
+</div>
+{% endblock %}

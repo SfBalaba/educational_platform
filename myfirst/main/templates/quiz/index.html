@@ -1,0 +1,29 @@
+{% extends 'quiz/custom_base.html'%}
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="../../../static/css/main.css">
+
+
+<style>
+  .jumbotron{
+    margin-bottom: 0;
+  }
+</style>
+{% block main %}
+<br>
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <h1 style="color:#46467A" class="display-1">Let's Quiz</h1>
+    <p class="display-4 d-none d-sm-block">Проверь свои знания!</p>
+    <p><strong>Чтобы начать, войдите в свой профиль</strong></p>
+    <p class="lead">
+      <a href="/student/studentlogin" role="button"><button class="dark-button">Войти как ученик</button></a>
+      <a href="/teacher/teacherlogin" role="button"><button class="dark-button">Войти как учитель</button></a>
+    </p>
+    <br><br><br>
+  </div>  
+</section>
+{% endblock %}
+</html>

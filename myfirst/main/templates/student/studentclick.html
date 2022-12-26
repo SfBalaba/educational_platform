@@ -1,0 +1,39 @@
+{% extends 'quiz/custom_base.html'%}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+  </style>
+
+</head>
+
+{% block main %}
+  <br><br>
+  <div class="jumbotron">
+    <h1 class="display-4">Привет, ученик</h1>
+    <p class="lead">Добро пожаловать на онлайн викторину</p>
+    <hr class="my-4">
+    <p>Вы можете получить доступ к различным функциям после входа в систему.</p>
+    <p class="lead">
+      <a href="studentsignup" role="button"><button class="dark-button">Создать аккаунт</button></a>
+      <a href="studentlogin" role="button"><button class="dark-button">Войти</button></a>
+    </p>
+    <br><br><br><br><br><br>
+  </div>
+  {% endblock %}
+
+</html>

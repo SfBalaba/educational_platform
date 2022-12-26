@@ -1,0 +1,58 @@
+{% extends 'student/studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+</head>
+<br><br>
+<div class="container my-4">
+    <div class="jumbotron">
+
+	      <h3 class="text-info text-center">Прежде чем приступить к экзамену, ознакомьтесь с правилами</h3>
+
+        <div class="row">
+
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body text-info">
+
+                    <h4 class="card-title">Об экзамене :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Название экзамена : {{course.course_name}}</li>
+                            <li>Число вопросов : {{total_questions}}</li>
+                            <li>Оценка : {{total_marks}}</li>
+                        </ul>
+                    <p></p>
+
+
+
+                    <h4 class="card-title">Rules :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Все вопросы с множественным выбором.</li>
+                            <li><span class="text-danger">Только один выбор правильный.</span></li>
+                            <li>Каждый вопрос имеет разные отметки
+                            </li>
+                
+                            <li>Постарайтесь ответить как можно быстрее.</li>
+                    <li>Если вы нажмете «Обновить» или вернетесь на предыдущую страницу, для вас появится новый вопрос, а вопрос, на который вы ответили, будет засчитан как попытка.</li> <li>
+                    Вопросы отображаются случайным образом для каждого пользователя</li>
+                    <li>Вам сообщат ваши оценки сразу после отправки ответа.</li>
+                        </ul>
+                    <p></p>
+                    <a href="{% url 'start-exam' course.id  %}" class="btn btn-info">Начать</a>
+                </div>  
+                <div class="card-footer">Удачи!</div>
+            </div>  
+        </div>  
+
+    </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}
